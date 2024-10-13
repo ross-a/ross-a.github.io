@@ -1145,40 +1145,40 @@ function dbg(...args) {
 // === Body ===
 
 var ASM_CONSTS = {
-  1099120: () => { if (document.fullscreenElement) return 1; },  
- 1099166: () => { return document.getElementById('canvas').width; },  
- 1099218: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 1099286: () => { document.exitFullscreen(); },  
- 1099313: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
- 1099386: () => { if (document.fullscreenElement) return 1; },  
- 1099432: () => { return document.getElementById('canvas').width; },  
- 1099484: () => { return screen.width; },  
- 1099509: () => { document.exitFullscreen(); },  
- 1099536: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
- 1099669: () => { if (document.fullscreenElement) return 1; },  
- 1099715: () => { return document.getElementById('canvas').width; },  
- 1099767: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 1099835: () => { if (document.fullscreenElement) return 1; },  
- 1099881: () => { return document.getElementById('canvas').width; },  
- 1099933: () => { return screen.width; },  
- 1099958: () => { if (document.fullscreenElement) return 1; },  
- 1100004: () => { return document.getElementById('canvas').width; },  
- 1100056: () => { return screen.width; },  
- 1100081: () => { document.exitFullscreen(); },  
- 1100108: () => { if (document.fullscreenElement) return 1; },  
- 1100154: () => { return document.getElementById('canvas').width; },  
- 1100206: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 1100274: () => { document.exitFullscreen(); },  
- 1100301: () => { return screen.width; },  
- 1100326: () => { return screen.height; },  
- 1100352: () => { return window.screenX; },  
- 1100379: () => { return window.screenY; },  
- 1100406: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 1100459: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
- 1100530: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 1100587: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
- 1100658: () => { if (document.fullscreenElement) return 1; },  
- 1100704: () => { if (document.pointerLockElement) return 1; }
+  1073216: () => { if (document.fullscreenElement) return 1; },  
+ 1073262: () => { return document.getElementById('canvas').width; },  
+ 1073314: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 1073382: () => { document.exitFullscreen(); },  
+ 1073409: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
+ 1073482: () => { if (document.fullscreenElement) return 1; },  
+ 1073528: () => { return document.getElementById('canvas').width; },  
+ 1073580: () => { return screen.width; },  
+ 1073605: () => { document.exitFullscreen(); },  
+ 1073632: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
+ 1073765: () => { if (document.fullscreenElement) return 1; },  
+ 1073811: () => { return document.getElementById('canvas').width; },  
+ 1073863: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 1073931: () => { if (document.fullscreenElement) return 1; },  
+ 1073977: () => { return document.getElementById('canvas').width; },  
+ 1074029: () => { return screen.width; },  
+ 1074054: () => { if (document.fullscreenElement) return 1; },  
+ 1074100: () => { return document.getElementById('canvas').width; },  
+ 1074152: () => { return screen.width; },  
+ 1074177: () => { document.exitFullscreen(); },  
+ 1074204: () => { if (document.fullscreenElement) return 1; },  
+ 1074250: () => { return document.getElementById('canvas').width; },  
+ 1074302: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 1074370: () => { document.exitFullscreen(); },  
+ 1074397: () => { return screen.width; },  
+ 1074422: () => { return screen.height; },  
+ 1074448: () => { return window.screenX; },  
+ 1074475: () => { return window.screenY; },  
+ 1074502: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 1074555: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 1074626: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 1074683: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
+ 1074754: () => { if (document.fullscreenElement) return 1; },  
+ 1074800: () => { if (document.pointerLockElement) return 1; }
 };
 function GetWindowInnerWidth() { return window.innerWidth; }
 function GetWindowInnerHeight() { return window.innerHeight; }
@@ -8886,10 +8886,6 @@ function GetWindowInnerHeight() { return window.innerHeight; }
   }
   
 
-  var _emscripten_sleep = () => {
-      throw 'Please compile your program with async support in order to use asynchronous operations like emscripten_sleep';
-    };
-
 
   
   
@@ -9015,11 +9011,6 @@ function GetWindowInnerHeight() { return window.innerHeight; }
   
   }
   
-
-
-
-
-
 
 
 
@@ -10183,8 +10174,6 @@ function GetWindowInnerHeight() { return window.innerHeight; }
 
   var _glfwDefaultWindowHints = () => GLFW.defaultWindowHints();
 
-  var _glfwDestroyWindow = (winid) => GLFW.destroyWindow(winid);
-
   var _glfwGetPrimaryMonitor = () => 1;
 
   var _glfwGetTime = () => GLFW.getTime() - GLFW.initialTime;
@@ -10828,8 +10817,6 @@ function assignWasmImports() {
     /** @export */
     emscripten_set_window_title: _emscripten_set_window_title,
     /** @export */
-    emscripten_sleep: _emscripten_sleep,
-    /** @export */
     exit: _exit,
     /** @export */
     fd_close: _fd_close,
@@ -10872,21 +10859,11 @@ function assignWasmImports() {
     /** @export */
     glCullFace: _glCullFace,
     /** @export */
-    glDeleteBuffers: _glDeleteBuffers,
-    /** @export */
     glDeleteProgram: _glDeleteProgram,
-    /** @export */
-    glDeleteShader: _glDeleteShader,
-    /** @export */
-    glDeleteTextures: _glDeleteTextures,
     /** @export */
     glDepthFunc: _glDepthFunc,
     /** @export */
-    glDetachShader: _glDetachShader,
-    /** @export */
     glDisable: _glDisable,
-    /** @export */
-    glDisableVertexAttribArray: _glDisableVertexAttribArray,
     /** @export */
     glDrawArrays: _glDrawArrays,
     /** @export */
@@ -10945,8 +10922,6 @@ function assignWasmImports() {
     glfwCreateWindow: _glfwCreateWindow,
     /** @export */
     glfwDefaultWindowHints: _glfwDefaultWindowHints,
-    /** @export */
-    glfwDestroyWindow: _glfwDestroyWindow,
     /** @export */
     glfwGetPrimaryMonitor: _glfwGetPrimaryMonitor,
     /** @export */
@@ -11022,7 +10997,6 @@ var _emscripten_stack_get_free = () => (_emscripten_stack_get_free = wasmExports
 var __emscripten_stack_restore = (a0) => (__emscripten_stack_restore = wasmExports['_emscripten_stack_restore'])(a0);
 var __emscripten_stack_alloc = (a0) => (__emscripten_stack_alloc = wasmExports['_emscripten_stack_alloc'])(a0);
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
-var dynCall_viiiiijii = Module['dynCall_viiiiijii'] = createExportWrapper('dynCall_viiiiijii', 10);
 var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji', 5);
 
 
